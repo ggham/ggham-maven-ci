@@ -20,7 +20,7 @@ public class OperationInvoker {
     public int invokeOnAllOperands(){
         int result = 0;
         for (Integer operand : _operands) {
-            result ^= operand;
+            result = _operation.invokeOperation(result, operand);
         }
 
         return result;
